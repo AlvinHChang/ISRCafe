@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import config from '../config';
-import './CafeContainer.css';
+import CafeTitle from '../CafeTitle/CafeTitle';
 
 class CafeContainer extends React.Component{
     refreshInterval = 10;
@@ -10,7 +10,7 @@ class CafeContainer extends React.Component{
             cafes: [],
             error: null,
             refreshTime: this.refreshInterval
-        }
+        };
         this.intervalHandle = setInterval(this.tick, 1000);
     }
     componentDidMount() {
@@ -47,27 +47,14 @@ class CafeContainer extends React.Component{
         }
         this.setState({refreshTime})
 
-    }
+    };
     render() {
-        const {cafes, error, refreshTime} = this.state;
+        const {error} = this.state;
         if (error) {
             console.log(error);
         }
         return (
-            <Fragment>
-                Will refresh in {refreshTime} seconds
-                <ul>
-                    {cafes.map((cafe) => {
-                            const ready = "[READY] " + cafe.drink + " for " + cafe.name;
-                            const notReady = "[PENDING] " + cafe.drink + " for " + cafe.name;
-                            return(
-                                <li key={cafe.time}>
-                                    {cafe.isReady? ready: notReady}
-                                </li>)
-                        }
-                    )}
-                </ul>
-            </Fragment>
+            <CafeTitle {...this.state} />
         );
     }
 }
