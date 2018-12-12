@@ -23,3 +23,26 @@ li {
 .title {
     margin-bottom:30px;
 }
+.welcome {
+    margin-bottom: 0;
+    font-family: 'Shadows Into Light', cursive;
+}
+.petrol {
+    margin-top: 0;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.cafe-order {
+    margin-bottom: 10px;
+    border: 3px solid darkgray;
+
+    border-radius: 20px ;
+    background-color: gray;
+}
+.cafe-order.pending {
+    border-color: #7c4a4a;
+}
+
+.cafe-order.ready {
+    border-color: #52ce58;
+}

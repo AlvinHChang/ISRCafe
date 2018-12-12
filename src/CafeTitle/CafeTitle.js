@@ -19,7 +19,7 @@ class CafeTitle extends React.Component {
                                 const pending = cafe.drink + " for " + cafe.name;
                                 return(
                                     cafe.isReady? null :
-                                        <li key={cafe.time + "pend"}>
+                                        <li key={cafe.time + "pend"} className="cafe-order pending">
                                             {pending}
                                         </li>)
                             }
@@ -27,9 +27,12 @@ class CafeTitle extends React.Component {
                     </QueueAnim>
                 </div>
                 <div className="cafe-container">
-                    <h1> Welcome to Petrol Cafe </h1>
+                    <div>
+                        <h2 className="welcome">Welcome to </h2>
+                        <h1 className="petrol">Petrol Café </h1>
+                    </div>
                     <img src={afroCaleb} className="afro-caleb" alt={"AfroCaleb"}/>
-                    Will refresh in {refreshTime} seconds
+                    Drink status will refresh in {refreshTime} seconds
                 </div>
                 <div className="ready">
                     <div className="title">
@@ -40,7 +43,7 @@ class CafeTitle extends React.Component {
                                 const ready = cafe.drink + " for " + cafe.name;
                                 return(
                                     cafe.isReady?
-                                        <li key={cafe.time + "ready"}>
+                                        <li key={cafe.time + "ready"} className="cafe-order ready">
                                             {ready}
                                         </li> : null)
                             }
