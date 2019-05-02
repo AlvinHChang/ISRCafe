@@ -3,11 +3,11 @@ import config from '../config';
 import CafeTitle from '../CafeTitle/CafeTitle';
 
 class CafeContainer extends React.Component{
-    refreshInterval = 10;
+    refreshInterval = 8;
     constructor(props){
         super(props);
         this.state = {
-            cafes: [],
+            orders: [],
             error: null,
             refreshTime: this.refreshInterval
         };
@@ -32,14 +32,15 @@ class CafeContainer extends React.Component{
     };
     onLoad = (data, error) => {
         if (data) {
-            const cafes = data.cafes;
-            this.setState({ cafes });
+            const orders = data.orders;
+            this.setState({ orders });
         } else {
             this.setState({ error });
         }
     };
 
     tick = () => {
+        // runs every time a tick is called
         let refreshTime = this.state.refreshTime - 1;
         if (refreshTime <= 0) {
             refreshTime = this.refreshInterval;
@@ -49,12 +50,12 @@ class CafeContainer extends React.Component{
 
     };
     render() {
-        const {error} = this.state;
+        const {error, orders, refreshTime} = this.state;
         if (error) {
             console.log(error);
         }
         return (
-            <CafeTitle {...this.state} />
+            <CafeTitle orders={orders} refreshTime={refreshTime} />
         );
     }
 }
@@ -65,22 +66,23 @@ export function load(callback) {
     window.gapi.client.sheets.spreadsheets.values
       .get({
           spreadsheetId: config.spreadsheetId,
+          // Modify according to correct sheet information
           range: "Sheet4!A3:E",
       })
       .then(
         response => {
             console.log(response);
           const data = response.result.values || [];
-          const cafes = data.map(cafe => ({
-              time: cafe[0],
-              name: cafe[1],
-              drink: cafe[2],
-              isReady: (cafe[3] === 'TRUE'),
-              hasReceived: (cafe[4] === 'TRUE'),
+          const orders = data.map(order => ({
+              time: order[0],
+              name: order[1],
+              drink: order[2],
+              isReady: (order[3] === 'TRUE'),
+              hasReceived: (order[4] === 'TRUE'),
 
           })) || [];
           callback({
-            cafes
+            orders
           });
         },
         response => {

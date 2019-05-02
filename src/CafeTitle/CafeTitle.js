@@ -3,24 +3,31 @@ import PropTypes from 'prop-types';
 
 import QueueAnim from 'rc-queue-anim';
 import afroCaleb from '../afrocalebCrop.png';
+import petrolIcon from '../PetrolIcon.png';
 import './CafeTitle.css';
 
 class CafeTitle extends React.Component {
     render(){
-        const {cafes, refreshTime} = this.props;
+        const {orders, refreshTime} = this.props;
         return (
             <div className="flex-box">
-                <div className="pending">
+                <div className="pending-container">
                     <div className="title">
-                    PENDING
+                    Pending
                     </div>
                     <QueueAnim>
-                        {cafes.map((cafe) => {
-                                const pending = cafe.drink + " for " + cafe.name;
+                        {orders.map((cafe) => {
+                                const orderItem = cafe.drink;
+                                const orderName = cafe.name;
                                 return(
                                     cafe.isReady? null :
                                         <li key={cafe.time + "pend"} className="cafe-order pending">
-                                            {pending}
+                                            <div className="order-item">
+                                                {orderItem}
+                                            </div>
+                                            <div className="order-name">
+                                                {orderName}
+                                            </div>
                                         </li>)
                             }
                         )}
@@ -31,20 +38,28 @@ class CafeTitle extends React.Component {
                         <h2 className="welcome">Welcome to </h2>
                         <h1 className="petrol">Petrol Café </h1>
                     </div>
-                    <img src={afroCaleb} className="afro-caleb" alt={"AfroCaleb"}/>
-                    Drink status will refresh in {refreshTime} seconds
+                    <img src={petrolIcon} className="afro-caleb" alt={"AfroCaleb"}/>
+                    <div className="timer-container">
+                        Drink status will refresh in {refreshTime} seconds
+                    </div>
                 </div>
-                <div className="ready">
+                <div className="ready-container">
                     <div className="title">
-                    READY
+                    Ready
                     </div>
                     <QueueAnim>
-                        {cafes.map((cafe) => {
-                                const ready = cafe.drink + " for " + cafe.name;
+                        {orders.map((cafe) => {
+                            const orderItem = cafe.drink;
+                            const orderName = cafe.name;
                                 return(
                                     cafe.isReady?
                                         <li key={cafe.time + "ready"} className="cafe-order ready">
-                                            {ready}
+                                            <div className="order-item">
+                                                {orderItem}
+                                            </div>
+                                            <div className="order-name">
+                                                {orderName}
+                                            </div>
                                         </li> : null)
                             }
                         )}
@@ -56,7 +71,7 @@ class CafeTitle extends React.Component {
 }
 CafeTitle.propTypes = {
     refreshTime: PropTypes.number,
-    cafes: PropTypes.object
+    orders: PropTypes.array
 };
 
 export default CafeTitle;

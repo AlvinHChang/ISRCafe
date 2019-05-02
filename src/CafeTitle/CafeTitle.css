@@ -5,6 +5,9 @@ li {
 .flex-box {
     display: flex;
     flex-direction: row;
+    padding: 25px;
+    width: 80%;
+    font-family: 'Segoe UI', 'Roboto', Serif;
 }
 .cafe-container {
     display: flex;
@@ -12,16 +15,22 @@ li {
     align-items: center;
     width: 500px;
 }
-.ready, .pending {
-    width: 300px;
+.ready-container, .pending-container {
+    width: 40%;
+    background-color: #455A64;
 }
 .afro-caleb {
     height: 341px;
     width: 322px;
     margin-bottom:40px;
 }
+.timer-container {
+    height: 50px;
+    width: 500px;
+}
 .title {
-    margin-bottom:30px;
+    margin-bottom:15px;
+    margin-top:15px;
 }
 .welcome {
     margin-bottom: 0;
@@ -33,16 +42,21 @@ li {
 }
 
 .cafe-order {
-    margin-bottom: 10px;
-    border: 3px solid darkgray;
-
-    border-radius: 20px ;
-    background-color: gray;
-}
-.cafe-order.pending {
-    border-color: #7c4a4a;
+    width: 97%;
+    padding: 5px;
 }
 
-.cafe-order.ready {
-    border-color: #52ce58;
+.order-item {
+    background-color: #546E7A;
 }
+.order-name {
+    background-color: #607D8B;
+    color: #E0E0E0;
+}
+.pending-container {
+    color: #FF5252;
+}
+.ready-container{
+    color: #00E676;
+}
+
