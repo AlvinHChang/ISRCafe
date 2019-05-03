@@ -1,15 +1,15 @@
 {
-  "main.css": "/ISRCafe/static/css/main.ed4a1799.chunk.css",
-  "main.js": "/ISRCafe/static/js/main.53f34802.chunk.js",
-  "main.js.map": "/ISRCafe/static/js/main.53f34802.chunk.js.map",
-  "static/js/1.d0c10f04.chunk.js": "/ISRCafe/static/js/1.d0c10f04.chunk.js",
-  "static/js/1.d0c10f04.chunk.js.map": "/ISRCafe/static/js/1.d0c10f04.chunk.js.map",
-  "runtime~main.js": "/ISRCafe/static/js/runtime~main.22772ce1.js",
-  "runtime~main.js.map": "/ISRCafe/static/js/runtime~main.22772ce1.js.map",
-  "static/media/PetrolIcon.png": "/ISRCafe/static/media/PetrolIcon.bb5d1da3.png",
-  "static/media/afrocalebCrop.png": "/ISRCafe/static/media/afrocalebCrop.84f9f08b.png",
-  "static/css/main.ed4a1799.chunk.css.map": "/ISRCafe/static/css/main.ed4a1799.chunk.css.map",
-  "index.html": "/ISRCafe/index.html",
-  "precache-manifest.46dce8a54929e10acc6672705fca36d6.js": "/ISRCafe/precache-manifest.46dce8a54929e10acc6672705fca36d6.js",
-  "service-worker.js": "/ISRCafe/service-worker.js"
+  "main.css": "/static/css/main.ed4a1799.chunk.css",
+  "main.js": "/static/js/main.17f39b19.chunk.js",
+  "main.js.map": "/static/js/main.17f39b19.chunk.js.map",
+  "static/js/1.d0c10f04.chunk.js": "/static/js/1.d0c10f04.chunk.js",
+  "static/js/1.d0c10f04.chunk.js.map": "/static/js/1.d0c10f04.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/PetrolIcon.png": "/static/media/PetrolIcon.bb5d1da3.png",
+  "static/media/afrocalebCrop.png": "/static/media/afrocalebCrop.84f9f08b.png",
+  "static/css/main.ed4a1799.chunk.css.map": "/static/css/main.ed4a1799.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.8789729ba3319b47e5a7338353104a0c.js": "/precache-manifest.8789729ba3319b47e5a7338353104a0c.js",
+  "service-worker.js": "/service-worker.js"
 }
