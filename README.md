@@ -4,7 +4,7 @@
 This app allows the display of a queue to be linked with a form submitted through Google Forms and handled through Google Sheets
 
 ## The Sheet
-`https://docs.google.com/spreadsheets/d/1LC-ZQXFZdf3rad0CVvmN0oL5bfmP2GZEhR-UN4MuN8o/edit?usp=sharing`
+https://docs.google.com/spreadsheets/d/1LC-ZQXFZdf3rad0CVvmN0oL5bfmP2GZEhR-UN4MuN8o/edit?usp=sharing
 
 This form shows all the orders
 In 'Form Responses 1' tab, it shows the timestamp, name, drinks, and order status of each drink.
@@ -24,7 +24,10 @@ For the Barista:
 ## Examples
 You can use this form to try putting in orders:
 
-`https://forms.gle/2hTsQheWX59pJ5oH9`
+https://forms.gle/2hTsQheWX59pJ5oH9
+
+The queue can be seen at:
+https://alvinhchang.github.io/ISRCafe/
 
 ## Available Scripts
 
