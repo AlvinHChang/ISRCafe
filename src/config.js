@@ -1,5 +1,5 @@
 export default {
-  apiKey: "AIzaSyBSRyjqGht9DZIMlhjip8jPJFPQJmzdmxc",
+  apiKey: "AIzaSyC3cGWiVFYa5VK3WmtYYfHGl9brii0ITE4",
   discoveryDocs:
     ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
   spreadsheetId: "1LC-ZQXFZdf3rad0CVvmN0oL5bfmP2GZEhR-UN4MuN8o",

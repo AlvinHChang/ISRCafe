@@ -53,6 +53,8 @@ class CafeContainer extends React.Component{
         const {error, orders, refreshTime} = this.state;
         if (error) {
             console.log(error);
+            // so it doesn't continuously read errors
+            this.setState({error: null});
         }
         return (
             <CafeTitle orders={orders} refreshTime={refreshTime} />
