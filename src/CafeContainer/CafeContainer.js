@@ -67,7 +67,7 @@ export function load(callback) {
       .get({
           spreadsheetId: config.spreadsheetId,
           // Modify according to correct sheet information
-          range: "Sheet4!A3:E",
+          range: config.spreadsheetRange
       })
       .then(
         response => {

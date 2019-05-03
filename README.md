@@ -1,4 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## ISR Cafe
+
+This app allows the display of a queue to be linked with a form submitted through Google Forms and handled through Google Sheets
+
+## The Sheet
+`https://docs.google.com/spreadsheets/d/1LC-ZQXFZdf3rad0CVvmN0oL5bfmP2GZEhR-UN4MuN8o/edit?usp=sharing`
+
+This form shows all the orders
+In 'Form Responses 1' tab, it shows the timestamp, name, drinks, and order status of each drink.
+The second to fourth sheets are Google Sheets formulas written to filter status for the 'OrderStatus' tab
+The 'OrderStatus' tab is the tab that is sent to the frontend.
+
+## How to Use
+
+Clone it and modify the config.js to the respective Google Sheet you have formatted.
+
+Most of the information should be used in the similar format as the Google Sheet provided, otherwise, it might not show correct information.
+
+For the Barista:
+-Click Ready once the drink is ready for pick up, the drinks displayed with move to the right side
+-Click Received once the person receives the drink, the order will then disappear from the right side
+
+## Examples
+You can use this form to try putting in orders:
+
+`https://forms.gle/2hTsQheWX59pJ5oH9`
 
 ## Available Scripts
 
@@ -23,22 +49,4 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
