@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "27083c002a685c07855c",
+    "revision": "53f34802d99f0fa9a21d",
     "url": "/ISRCafe/static/css/main.ed4a1799.chunk.css"
   },
   {
-    "revision": "27083c002a685c07855c",
-    "url": "/ISRCafe/static/js/main.27083c00.chunk.js"
+    "revision": "53f34802d99f0fa9a21d",
+    "url": "/ISRCafe/static/js/main.53f34802.chunk.js"
   },
   {
     "revision": "d0c10f04c564c81f4c3d",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/ISRCafe/static/media/afrocalebCrop.84f9f08b.png"
   },
   {
-    "revision": "0262a652110361572fc6462c7798c04f",
+    "revision": "0879c75e70a14812a733a09a4b681af7",
     "url": "/ISRCafe/index.html"
   }
 ];
